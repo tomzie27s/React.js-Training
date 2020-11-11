@@ -1,6 +1,8 @@
 import React from "react";
 
+const name = "Samuel P. de Leon";
 const dateNow = new Date().toDateString();
+const year = new Date().getFullYear();
 
 const customStyle = {
     color: "blue",
@@ -13,7 +15,11 @@ customStyle.color = "green";
 
 function ShowDateNow() {
   return (
-    <p style={customStyle}>{dateNow}</p>
+      <footer>
+        <p style={customStyle}>{dateNow}</p>
+        <p>Created by: {name}</p>
+        <p>Copyright &copy; {year}</p>
+      </footer>
   );
 };
 
